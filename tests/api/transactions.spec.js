@@ -13,7 +13,7 @@ test('Find Transactions via UI', async ({ page }) => {
     await page.click('text=Find Transactions');
 
     // Step 4: Enter Amount and Click "Find Transactions"
-    await page.fill('#amount', '100.00');  // Example amount
+    await page.fill('#amount', '10.00');  // Example amount
     await page.click('#findByAmount');
 
     // Step 5: Wait for transactions to load
