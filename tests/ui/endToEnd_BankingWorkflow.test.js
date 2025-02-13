@@ -60,7 +60,7 @@ test('User Registration, Logout, Re-login, Open New Accounts, Transfer Funds, an
   if (!secondAccountNumber) throw new Error("Failed to fetch Second Account Number");
 
   // Print both account numbers for verification
-  console.log(`📌 Created Accounts: First - ${firstAccountNumber}, Second - ${secondAccountNumber}`);
+  console.log(`Created Accounts: First - ${firstAccountNumber}, Second - ${secondAccountNumber}`);
 
   // Transfer Funds (Handled in TransferFundsPage) - Ensure Different Accounts
   await transferFundsPage.navigateToTransferFunds();

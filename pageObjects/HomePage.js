@@ -12,16 +12,16 @@ export class HomePage {
   }
 
   async verifyNavigationMenu() {
-    console.log('🛠️ Verifying Global Navigation Menu...');
+    console.log('Verifying Global Navigation Menu...');
     
     for (const menuItem of this.navigationMenuItems) {
       const navLocator = this.page.locator(menuItem.selector);
       
-      // ✅ Ensure the menu item is visible
+      // Ensure the menu item is visible
       await expect(navLocator).toBeVisible({ timeout: 5000 });
-      console.log(`✅ Menu Item "${menuItem.text}" is visible.`);
+      console.log(`Menu Item "${menuItem.text}" is visible.`);
     }
 
-    console.log('✅ Navigation Menu Verification Completed.');
+    console.log('Navigation Menu Verification Completed.');
   }
 }

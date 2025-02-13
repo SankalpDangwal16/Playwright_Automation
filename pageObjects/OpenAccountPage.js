@@ -65,7 +65,7 @@ export class OpenAccountPage {
     let accountNumber = await this.page.textContent(this.accountNumberLocator);
     
     if (!accountNumber || accountNumber.trim() === "Open New Account") {
-        throw new Error("❌ Failed to fetch New Account Number");
+        throw new Error("Failed to fetch New Account Number");
     }
 
     console.log(`Account Created: ${accountNumber}`);

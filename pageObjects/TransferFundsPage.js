@@ -36,11 +36,11 @@ export class TransferFundsPage {
     const fromAccountOptions = await this.waitForDropdownOptions(this.fromAccountDropdown);
     const toAccountOptions = await this.waitForDropdownOptions(this.toAccountDropdown);
 
-    console.log(`🔍 Available From Accounts: ${fromAccountOptions}`);
-    console.log(`🔍 Available To Accounts: ${toAccountOptions}`);
+    console.log(`Available From Accounts: ${fromAccountOptions}`);
+    console.log(`Available To Accounts: ${toAccountOptions}`);
 
     if (fromAccountOptions.length === 0 || toAccountOptions.length === 0) {
-      throw new Error(`❌ No accounts available for transfer. From: ${fromAccountOptions}, To: ${toAccountOptions}`);
+      throw new Error(`No accounts available for transfer. From: ${fromAccountOptions}, To: ${toAccountOptions}`);
     }
 
     // Select different accounts for transfer
@@ -48,7 +48,7 @@ export class TransferFundsPage {
     let toAccountId = toAccountOptions.find(account => account !== fromAccountId) || fromAccountOptions[1];
 
     if (!toAccountId) {
-      throw new Error('❌ Unable to find a different account for transfer.');
+      throw new Error('Unable to find a different account for transfer.');
     }
 
     console.log(`Transferring $${amount} from ${fromAccountId} to ${toAccountId}`);
