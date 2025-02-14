@@ -8,9 +8,11 @@ test('Verify Transactions for Account 14454', async ({ request }) => {
   const username = "josedon";
   const password = "sanku";
 
+
   // Combine username and password and encode to base64
   const credentials = `${username}:${password}`;
   const encodedCredentials = Buffer.from(credentials).toString("base64");
+
 
   // Define the headers with Authorization
   const headers = {
